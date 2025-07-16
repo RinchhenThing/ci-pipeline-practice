@@ -1,0 +1,16 @@
+#now we combine branches with path filters
+name: JS on Main Only
+
+on:
+  push:
+    branches:  
+      - main
+    paths: 
+      - 'new-src/index.js'
+
+jobs:
+  branch-and-path:
+    runs-on: ubunu-latest
+    steps:
+      - name: Triggered on main with JS file change
+        run: echo "JS file changed on main, workflow is running"
