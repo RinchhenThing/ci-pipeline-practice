@@ -9,6 +9,7 @@ on:
 
 jobs:
   run-js-tests:
+    runs-on: ubuntu-latest
     steps:
       - name: Show changed JS files trigger
         run: echo "Workflow ran because JS files changed."
