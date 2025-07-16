@@ -1,0 +1,14 @@
+#this workflow triggers only when the push is done to the main branch 
+name: Push to Main Only
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  echo-main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello from Main
+        run: echo "This runs only on push to the main branch!"
