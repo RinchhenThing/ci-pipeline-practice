@@ -1,0 +1,14 @@
+#THIS triggers only when the js code changes 
+
+name: Push with Path Filter
+
+on:
+  push: 
+    paths:
+      - 'new-src/index.js'
+
+jobs:
+  run-js-tests:
+    steps:
+      - name: Show changed JS files trigger
+        run: echo "Workflow ran because JS files changed."
