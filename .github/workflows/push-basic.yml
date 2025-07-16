@@ -1,1 +1,13 @@
+#lets create a basic push workflow
 
+name: Basic Push Workflow
+
+on: push
+
+jobs: 
+  echo-message: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "This is triggered by a push!"
+        
